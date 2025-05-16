@@ -1,0 +1,112 @@
+.formContainer {
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin: 0 auto;
+  padding: 5.6rem;
+  display: grid;
+  gap: 1.6rem;
+  min-width: 40rem;
+}
+
+.info {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: #1b1b1b;
+  height: 4.4rem;
+
+  border-radius: 4px;
+  border: 0.1rem solid #aaa;
+  background: #fff;
+  padding: 1.6rem 1.6rem;
+  margin-top: 0.4rem;
+
+  transition: border 0.1s ease-in-out;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.input:hover {
+  border: 1.5px solid var(--red);
+}
+
+.input:focus {
+  outline-color: var(--red);
+}
+
+.inputSenha {
+  font-size: 2.4rem;
+}
+
+.textarea {
+  resize: vertical;
+  height: 12rem;
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botaoCancelar,
+.botaoSubmit {
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 12rem;
+  cursor: pointer;
+  border-width: 1px;
+  transition: all 0.1s ease-in-out;
+}
+
+.botaoCancelar:focus,
+.botaoSubmit:focus {
+  outline: 2px solid #1b1b1b;
+  border-radius: 4px;
+}
+
+.botaoSubmit {
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--red);
+}
+
+.botaoSubmit:hover {
+  background-color: var(--red-darker);
+}
+
+.botaoCancelar {
+  background-color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .formContainer {
+    padding: 2.4rem;
+    width: 84vw;
+    min-width: 0;
+  }
+  .input {
+    width: 100%;
+  }
+  .botaoCancelar,
+  .botaoSubmit {
+    min-width: 10rem;
+  }
+}

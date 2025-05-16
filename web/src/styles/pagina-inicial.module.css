@@ -1,0 +1,38 @@
+.linksBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.linkLi {
+  flex: 1;
+}
+
+.linkLi a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--white);
+  text-align: center;
+  text-wrap: pretty;
+
+  background-color: var(--red);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  min-width: 20rem;
+  height: 100%;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.linkLi a:hover {
+  transform: scale(1.01);
+  background-color: var(--red-darker);
+}
+
+.icon {
+  width: 1.2rem;
+  margin-left: 0.8rem;
+}

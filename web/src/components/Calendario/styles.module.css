@@ -1,0 +1,38 @@
+.calendarioContainer {
+  background-color: var(--white);
+  height: 460px;
+  width: 100%;
+  margin-inline: auto;
+  grid-column: span 2;
+}
+.toolbarStyle {
+  font-weight: bold;
+  color: var(--red);
+}
+.rbc-button-link[role="cell"] {
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .calendarioContainer {
+    width: 88vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendarioContainer {
+    height: 360px;
+    min-width: 300px;
+  }
+  .eventStyle {
+    font-size: 10px !important;
+  }
+  .rbc-button-link,
+  .rbc-show-more {
+    font-size: 12px !important;
+  }
+  .rbc-event,
+  .rbc-button-link[role="cell"] {
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,48 @@
+.appFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: space-between;
+
+  width: 100%;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1.6rem 4rem;
+}
+
+.footerTitle {
+  font-family: var(--font-montserrat_alternates);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.versionText {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  display: block;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.footerLink {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.BoxLink {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .appFooter {
+    padding-inline: 1.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .appFooter {
+    padding-inline: 0.8rem;
+  }
+}
