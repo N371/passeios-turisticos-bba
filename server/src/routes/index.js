@@ -7,6 +7,8 @@ const atracoesTuristicas = require("./atracoesTuristicasRoute");
 const usuarios = require("./usuariosRoute");
 const eventos = require("./eventosRoute");
 const auth = require("./authRoute");
+const sms = require("./smsRoutes");
+const mensagens = require("./msgControlRoutes"); // 👈 aqui está o que você precisa adicionar
 
 module.exports = (app) => {
   app.use(
@@ -18,6 +20,9 @@ module.exports = (app) => {
     atracoesTuristicas,
     usuarios,
     eventos,
-    auth
+    auth,
+    sms,
+    mensagens // 👈 aqui registra a rota
   );
 };
+

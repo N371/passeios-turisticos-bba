@@ -1,37 +1,32 @@
-/* eslint-disable no-undef */
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const swaggerUi = require("swagger-ui-express");
-const manipuladorDeErros = require("./middlewares/manipuladorDeErros");
-const manipulador404 = require("./middlewares/manipulador404");
-const routes = require("./routes");
+const smsRoutes = require("./routes/smsRoutes");            // rotas SMS
+const tbSmsControlRoutes = require("./routes/tb_sms_controlRoutes"); // rotas tb_sms_control
 
 const app = express();
-app.use(express.static(path.join(__dirname, "../public")));
+
+app.use(express.json()); // para ler JSON do body
 
 app.use(
   cors({
-    origin: //"https://passeiosturisticosbba.vercel.app",
-            "http://localhost:3000",	  
+    origin: "https://passeiosturisticosbba.vercel.app",
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
+// Monta as rotas
+app.use("/sms", smsRoutes);              // rotas SMS em /sms
+app.use("/mensagens", tbSmsControlRoutes); // rotas tb_sms_control em /mensagens
+
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: "./public" });
+  res.sendFile("index.html", { root: path.join(__dirname, "../public") });
 });
 
-var swaggerOptions = {
-  customCssUrl: "/swagger-ui.css",
-};
-
-const swaggerDocument = require(path.join(__dirname, "../public/swagger-config.json"));
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOptions));
-
-routes(app);
-
-app.use(manipulador404);
-app.use(manipuladorDeErros);
+// Middleware para rotas não encontradas
+app.use((req, res) => {
+  res.status(404).json({ mensagem: "Página não encontrada.", status: 404 });
+});
 
 module.exports = app;
+
