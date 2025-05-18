@@ -1,0 +1,30 @@
+/* Estilos específicos para o SmsCard */
+.smsCard {
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.smsCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.smsCard:active {
+  transform: scale(0.99);
+}
+
+.cardTitle {
+  color: #b00000;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.cardDescription {
+  color: #333;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+}
