@@ -134,6 +134,7 @@ cron.schedule("*/10 * * * *", async () => {
     }
 
     const endpointUrl = "http://127.0.0.1:8181/enviar_sms";
+    //const endpointUrl= "https://sms.comtele.com.br/api/v2/send";
     const authKey = "08f06139-561c-4135-a03c-180bac53eab0";
 
     for (const msg of mensagensParaEnviar) {
