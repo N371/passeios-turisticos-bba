@@ -8,7 +8,7 @@ const usuarios = require("./usuariosRoute");
 const eventos = require("./eventosRoute");
 const auth = require("./authRoute");
 const sms = require("./smsRoutes");
-
+const mensagens = require("./tb_sms_controlRoutes");
 module.exports = (app) => {
   app.use(
     bodyParser.json(),
@@ -20,6 +20,7 @@ module.exports = (app) => {
     usuarios,
     eventos,
     auth,
-    sms
+    sms,
+    mensagens
   );
 };

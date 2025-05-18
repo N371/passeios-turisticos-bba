@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "node-cron": "^4.0.5",
+    "node-fetch": "^2.7.0",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.11",
+    "@types/node-fetch": "^2.6.12",
+    "@types/pg": "^8.15.2"
+  }
+}
